@@ -5,5 +5,6 @@ Our intrusion detection system has alerted us to suspicious behavior on a workst
 
 <h3> Securirty tools used for this CTF and their purpose </h3>
   - Volatility 3 ( memory forensics framework to extract digital artifact from RAM dumps)
+  * Download Voltaility3 by going to their offical website> Github> Follow their intructions. 
   
   <br>- VM (Kali Linux)
