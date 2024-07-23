@@ -28,7 +28,7 @@ the syntax would look like this:
 
 <br> <i>python3 vol.py -f NameofImage.dmp imageinfo</i>
 
-<br><Step 3:<br>
+<br>Step 3:<br>
 The terminal should now show net information pertaining to the processes in the memory image. We want to pay particular attention the the <i>Owner</i> column. We will see a fair amount of process that are common for Windows, upon analysis we will see a process that is NOT windows related and that is <i> ChromeSetup.exe</i>
 
 <br><b>Answer:</b><i> ChromeSetup.exe</i>
@@ -66,5 +66,17 @@ We want to find the logical address of that our attackers malware is trying to c
 
 <hr>
 
+<h3>Question 4:</h3>
+<i>To pinpoint the geographical orgin of the attack, which city is associated with the IP address the malware communicated with</i>
 
+<h3>Approach:</h3>
+We understand knowing as much information about the attacker can aid us in understanding who they are, were they are, their TTPs and how sophisticated our attacker(s) is. This information will also help use block the attack, do further analysis for this specific IP address and even take legal actions against the attacker. Understanding that IP addresses are a logical address provided to indivduals to access the public internet as well as other networks and that their are websites such as "whatismyipaddress.com" that can help us look up the orgin of an IP address will aid us in our search. 
+
+<h3>Steps</h3>
+<b>Step 1:</b>
+<br> This step is simple. We will simplely copy and paste the IP address we found from our potential attacker into the website "whatismyipaddress.com" and it will feed us back the orgin (City) of the IP address.
+
+<b>Answer:</b><i> Hong Kong</i>
+
+<hr>
 
