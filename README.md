@@ -76,8 +76,7 @@ We understand knowing as much information about the attacker can aid us in under
 <b>Step 1:</b>
 <br> This step is simple. We will simplely copy and paste the IP address we found from our potential attacker into the website "whatismyipaddress.com" and it will feed us back the orgin (City) of the IP address.
 
-
-<b>Answer:</b><i> Hong Kong</i>
+<br><b>Answer:</b><i> Hong Kong</i>
 
 <hr>
 
