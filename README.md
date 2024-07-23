@@ -8,3 +8,15 @@ Our intrusion detection system has alerted us to suspicious behavior on a workst
   * Download Voltaility3 by going to their offical website> Github> Follow their intructions. 
   
   <br>- VM (Kali Linux)
+  <hr>
+  <h3>Question 1:</h3>
+  <i>We need to identify the process responsible for this suspicious behavior. What is the name of the suspicious process?</i>
+  <h3>Approach:</h3>
+  <br> The question is asking us to find the process cause the suspicious behavior. We first must understand that Volatility comes with plugins that can aid with listing all process ran in memory on our workstation.
+
+<h3>Steps:</h3>
+<b>Step 1:</b>
+<br> After setting up our VM machine, installing Volatility3, Pyhton3 and our memory.dmp file provided to us from CyberDefender (password for extraction also provided). We will move our .dmp file into a folder that is also in the directory of our Volatility3 tool.
+
+<br><b>Step 2:<b><br>
+<br>We know that the was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide
