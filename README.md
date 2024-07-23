@@ -19,4 +19,8 @@ Our intrusion detection system has alerted us to suspicious behavior on a workst
 <br> After setting up our VM machine, installing Volatility3, Pyhton3 and our memory.dmp file provided to us from CyberDefender (password for extraction also provided). We will move our .dmp file into a folder that is also in the directory of our Volatility3 tool.
 
 <br><b>Step 2:<b><br>
-<br>We know that the was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide
+<br>We know that there was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide us with network information about the system at the time the memory image was captured, <b>Netstat*</b> and <b>Netscan*</b>.
+
+<br> **Ideally we would want to input a the plugin<b>imageinfo</b> to obtain information to better understand the correct type of profile to use for our analysis. Profiles help specificy  the OS and version for accurate parsing and xamination of the memory image. **
+the syntax would look like this: 
+<br> <i>python3 vol.py -f NameofImage.dmp imageinfo</i>
