@@ -42,7 +42,7 @@ The terminal should now show net information pertaining to the processes in the 
 <b>Step 1:</b>
 <br> We will input into the terminal the synax:
   
-<br><i> python3 vol.py -f NameOfImg.dmp cmdline | grep "ChromeSetup.exe"
+<br><i> python3 vol.py -f NameOfImg.dmp cmdline | grep "ChromeSetup.exe" </i>
 
 <br> we include  the pipe symbol "|" and <i>grep</i> linux command to emphasize we want to find ones particular to the proccess <i>ChromeSetup.exe</i>. 
 
@@ -80,3 +80,45 @@ We understand knowing as much information about the attacker can aid us in under
 
 <hr>
 
+<h3>Question 5:</h3>
+<i>Hashes provide a unique identifier for files, aiding in detecting similar threats across machines. What is the SHA1 hash of the malware's executable?</i>
+
+<h3>Approach:</h3>
+To approach this analysis we first must understand the significance of SHA1. SHA1 is used as a cryptographic has function to create a 160-bit has value is encrypt files and documents. Being able to aquire our malwares SHA1 value we will be able to use it for further analysis later on. 
+
+<h3>Steps</h3>
+<b>Step 1:</b>
+
+<br>We first want dump the specified process on the machine to find our malicious proccess PID. We will use the line:
+<br><i> python vol.py -f memory.dmp pslist | grep "ChromeSetup.exe"</i>
+<br> Our PID of the file says our PID is "4628". We then want to dump the proccessonto the device. We will dump the malware into a dump folder. We will then CD into the folder containing the dump and use the linux command <b>sha1sum</b> which will give us the hash value.
+
+<br><b>Answer:</b>280c9d36039f9432433893dee6126d72b9112ad2<i>
+
+<hr>
+
+<h3>Question 6:</h3>
+<i>Understanding the malware's development timeline can offer insights into its deployment. What is the compilation UTC timestamp of the malware?</i>
+
+<h3>Approach:</h3>
+As it says in the question, understanding the malwares development timeline can offer insights into its deployment. We have linux commands that can be used in the terminal that will help us gain knowledge into how long this proccess went undiscovered up until know. Having a timeline will also help us understand the time in which are bad actor usally operates. 
+
+<h3>Steps</h3>
+<b>Step 1:</b>
+<br> This is a pretty simple step we will input the file that we dump into our proccess from the last question with the linux command "exiftool", which is a command that manages the meta data within a file. 
+<br><i>exiftool file......ChromeSetup.exe.img</i>
+<br>We then will be displayed metadata and timelines. We want look for "Time Stamp" on the side which will give use time that we will convert into UTC from our current timezone. If correct it should give everyone the same time despite being in a different area.
+
+<br><b>Answer:</b><i>December-1-2019 10:36:04</i>
+
+<h3>Question 7:</h3>
+<i>Identifying domains involved with this malware helps in blocking future malicious communications and identifying current possible communications with that domain in our network. Can you provide the domain related to the malware?</i>
+
+<h3>Approach:</h3>
+We must find any associated domains related to this malware. Having an SHA1 (has value) we can use our VirusTotal tool  to find said domain. Once we find this domain we will be able to block communication between it and our network to prevent future communication.
+
+<h3>Steps</h3>
+<b>Step 1:</b>
+We will simply take the SHA1 value we obtain in the previous question and input it into the  VirusTotal website. We then will be presented  with details and other information similar to this value. We will naviagte to the relations tab where we will find others connected urls with the domain name <i>dnsnb8.net</i>
+
+<br><b>Answer:</b><i>dnsnb8.net</i>
