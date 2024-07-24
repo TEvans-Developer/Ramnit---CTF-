@@ -19,7 +19,7 @@ Our intrusion detection system has alerted us to suspicious behavior on a workst
 <br> After setting up our VM machine, installing Volatility3, Pyhton3 and our memory.dmp file provided to us from CyberDefender (password for extraction also provided). We will move our .dmp file into a folder that is also in the directory of our Volatility3 tool.
 
 <br><b>Step 2:<b><br>
-<br>We know that there was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide us with network information about the system at the time the memory image was captured, <b>Netstat*</b> and <b>Netscan*</b> (netscan was used in the instance due to an issue with cloning volatility from Git). We will open our terminal and type:
+<br>We know that there was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide us with network information about the system at the time the memory image was captured, <b>Netstat</b> and <b>Netscan</b> (netscan was used in the instance due to an issue with cloning volatility from Git). We will open our terminal and type:
 <br><i> python3 vol.py -f NameOfImage.dmp netstat **(or netscan)</i>
 
 
@@ -37,7 +37,7 @@ The terminal should now show net information pertaining to the processes in the 
 <h3>Question 2:</h3>
 <i>To eradicate the malware, what is the exact file path of the process executable? </i>
 <h3>Approach:</h3>
-<br> We understand that we need to eradicate the malware. In order to do so we must undertand our file path and the process execuatble <i> ChromeSetup.exe</i>. Taking into account of the word process  a command of some sort must be made. Volatility has a plugin <b>cmdline<b>* which we can use for our analysis to display the command line arguments for each process and what executed scripts were ran.
+<br> We understand that we need to eradicate the malware. In order to do so we must undertand our file path and the process execuatble <i> ChromeSetup.exe</i>. Taking into account of the word process  a command of some sort must be made. Volatility has a plugin <b>cmdline<b> which we can use for our analysis to display the command line arguments for each process and what executed scripts were ran.
 <h3> Steps</h3>
 <b>Step 1:</b>
 <br> We will input into the terminal the synax:
@@ -122,3 +122,33 @@ We must find any associated domains related to this malware. Having a SHA1 (hash
 We will simply take the SHA1 value we obtain in the previous question and input it into the  VirusTotal website. We then will be presented  with details and other information similar to this value. We will naviagte to the relations tab where we will find other contacted urls with the domain name <i>dnsnb8.net</i>
 
 <br><b>Answer:</b><i>dnsnb8.net</i>
+
+<hr>
+<h3>Report:</h3>
+It appears our threat actor wanted to infilitrate our network to gain more knowledge about its infrastructure. The threat actor could also gain senstivie information regarding the company, its users and much more by making lateral movements that could have gone unnoticed. 
+
+<h3>Tactics</h3>
+Lateral Movement (RDP)
+Network Sniffing
+Defensive Evasion
+Initial Access
+
+<h3>Techniques</h3>
+Phishing (Possible)
+Malware ( Possible Trojan )
+DDoS Attacks
+C2
+
+<h3> Procedure:</h3>
+It appears our threat actor is an individual from Hong Kong who is associated with the ip address 58.64.204.181. They were able connection to our network via malicious executable malware called ChromeSetup.exe that was downloaded into Alexs workstation. The proccess was dumped from memory and a SHA1 value was found which allowed us to input the value into VirusTotal to better analysis the danger of the malware. We observed that hash was also associated with other contacted urls with similiar domains , dnsnb8.net.
+
+<h3>Mitigation</h3>
+Implementation of Configurated Firewalls that block the ip and domain associated with the malware.
+Implemnt DNS filtering.
+Inform users within the network about the incident and what they should look for (Threat Intelligence Feeds)
+Implement patches for regular updates and vulnerability management. 
+Regular drills to mimic such attacks to see how the teams react. 
+
+
+
+
