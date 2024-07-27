@@ -105,12 +105,12 @@ To approach this analysis we first must understand the significance of SHA1. SHA
 <br><i> python vol.py -f memory.dmp pslist | grep "ChromeSetup.exe"</i>
 <br> Our PID of the file says our PID is "4628". We then want to dump the proccess onto the device. We will dump the malware into a dump folder. We will then CD into the folder containing the dump and use the linux command <b>sha1sum</b> which will give us the hash value.
 
-<br><b>In order to dump I used the command</b>
-<br><i> python3 vol.py -f memory.dmp -o /Documents/volatility3/DumpFolder2 windows.dumpfiles --pid 4628</i>
+
 
 <br>![pslist1](https://github.com/user-attachments/assets/625b33c0-641e-4355-8b6e-5f39cbbfb538)
 
-
+<br><b>In order to dump I used the command</b>
+<br><i> python3 vol.py -f memory.dmp -o /Documents/volatility3/DumpFolder2 windows.dumpfiles --pid 4628</i>
 
 <br>![sha1](https://github.com/user-attachments/assets/297388b1-1d0d-4c70-b463-3e6cfa6a85fa)
 
