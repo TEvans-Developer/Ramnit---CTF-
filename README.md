@@ -144,6 +144,9 @@ We must find any associated domains related to this malware. Having a SHA1 (hash
 <b>Step 1:</b>
 We will simply take the SHA1 value we obtain in the previous question and input it into the  VirusTotal website. We then will be presented  with details and other information similar to this value. We will naviagte to the relations tab where we will find other contacted urls with the domain name <i>dnsnb8.net</i>
 
+<br>![VirusTotal](https://github.com/user-attachments/assets/8a6f8abc-7da7-4e7e-b19a-4d85360b08cb)
+
+
 <br><b>Answer:</b><i>dnsnb8.net</i>
 
 <hr>
