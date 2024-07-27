@@ -31,6 +31,9 @@ the syntax would look like this:
 <br>Step 3:<br>
 The terminal should now show net information pertaining to the processes in the memory image. We want to pay particular attention the the <i>Owner</i> column. We will see a fair amount of process that are common for Windows, upon analysis we will see a process that is NOT windows related and that is <i> ChromeSetup.exe</i>
 
+<br>![Netscan](https://github.com/user-attachments/assets/4385cab7-866e-4675-9bab-37e9ff70e761)
+
+
 <br><b>Answer:</b><i> ChromeSetup.exe</i>
 <hr>
 
