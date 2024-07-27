@@ -85,6 +85,9 @@ We understand knowing as much information about the attacker can aid us in under
 <b>Step 1:</b>
 <br> This step is simple. We will simplely copy and paste the IP address we found from our potential attacker into the website "whatismyipaddress.com" and it will feed us back the orgin (City) of the IP address.
 
+<br>![Location](https://github.com/user-attachments/assets/11efbbcd-9fd7-4251-9016-afc9f6183fe6)
+
+
 <br><b>Answer:</b><i> Hong Kong</i>
 
 <hr>
@@ -101,6 +104,17 @@ To approach this analysis we first must understand the significance of SHA1. SHA
 <br>We first want dump the specified process on the machine to find our malicious proccess PID. We will use the line:
 <br><i> python vol.py -f memory.dmp pslist | grep "ChromeSetup.exe"</i>
 <br> Our PID of the file says our PID is "4628". We then want to dump the proccess onto the device. We will dump the malware into a dump folder. We will then CD into the folder containing the dump and use the linux command <b>sha1sum</b> which will give us the hash value.
+
+<br><b>In order to dump I used the command</b>
+<br><i> python3 vol.py -f memory.dmp -o /Documents/volatility3/DumpFolder2 windows.dumpfiles --pid 4628</i>
+
+<br>![pslist1](https://github.com/user-attachments/assets/625b33c0-641e-4355-8b6e-5f39cbbfb538)
+
+
+
+<br>![sha1](https://github.com/user-attachments/assets/297388b1-1d0d-4c70-b463-3e6cfa6a85fa)
+
+
 
 <br><b>Answer:</b>280c9d36039f9432433893dee6126d72b9112ad2<i>
 
