@@ -60,12 +60,13 @@ The terminal should now show net information pertaining to the processes in the 
 We want to find the logical address of that our attackers malware is trying to communicate to a potential (C2) for this particular process. We know from our previous question what the proccess is and with IP address being network based we can revisit our netstat ( or netscan)  to find the ip address. 
 
 <h3>Steps:</h3>
-![cmdline](https://github.com/user-attachments/assets/b7dbc2a4-fbc1-44ea-a5b5-e295063afcce)
-![cmdline](https://github.com/user-attachments/assets/051aac25-86d7-4711-ab7c-81ed1a9f1725)
 
 <b>Step 1:</b>
 <br> We want to renter our command or tab up on our keyboard until it reappears:
 <br><i> python3 vol.py -f NameOfImage.dmp netstat **(or netscan)</i> 
+
+<br>![IP](https://github.com/user-attachments/assets/061d40f9-de48-40c1-98c9-a22e5e9012fe)
+
 
 <b>Answer: <b><i>58.64.204.181</i>
 
