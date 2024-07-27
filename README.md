@@ -46,6 +46,9 @@ The terminal should now show net information pertaining to the processes in the 
 
 <br> we include  the pipe symbol "|" and <i>grep</i> linux command to emphasize we want to find ones particular to the proccess <i>ChromeSetup.exe</i>. 
 
+<br>![cmdline](https://github.com/user-attachments/assets/66c53588-6895-4edb-b467-5153ca23cc57)
+
+
 <br><b>Answer:</b><i>C:\Users\alex\Downloads\ChromeSetup.exe</i>
 
 <hr>
@@ -57,6 +60,8 @@ The terminal should now show net information pertaining to the processes in the 
 We want to find the logical address of that our attackers malware is trying to communicate to a potential (C2) for this particular process. We know from our previous question what the proccess is and with IP address being network based we can revisit our netstat ( or netscan)  to find the ip address. 
 
 <h3>Steps:</h3>
+![cmdline](https://github.com/user-attachments/assets/b7dbc2a4-fbc1-44ea-a5b5-e295063afcce)
+![cmdline](https://github.com/user-attachments/assets/051aac25-86d7-4711-ab7c-81ed1a9f1725)
 
 <b>Step 1:</b>
 <br> We want to renter our command or tab up on our keyboard until it reappears:
