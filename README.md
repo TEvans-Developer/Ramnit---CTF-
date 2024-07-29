@@ -16,7 +16,7 @@ Our intrusion detection system has alerted us to suspicious behavior on a workst
 
 <h3>Steps:</h3>
 <b>Step 1:</b>
-<br> After setting up our VM machine, installing Volatility3, Pyhton3 and our memory.dmp file provided to us from CyberDefender (password for extraction also provided). We will move our .dmp file into a folder that is also in the directory of our Volatility3 tool.
+<br> After setting up the VM machine, installing Volatility3, Pyhton3 and downloading our memory.dmp file provided to us from CyberDefender (password for extraction also provided). We will move our .dmp file into a folder that is also in the directory of our Volatility3 tool.
 
 <br><b>Step 2:<b><br>
 <br>We know that there was some type of suspicious behavior that alerted our system that a connection was being made to our workstation. Volatility3 has 2 two plugins that can provide us with network information about the system at the time the memory image was captured, <b>Netstat</b> and <b>Netscan</b> (netscan was used in the instance due to an issue with cloning volatility from Git). We will open our terminal and type:
